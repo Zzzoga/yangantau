@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .header{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-wrapper {
+            position: relative;
+        }
+
+        .grid {
+            position: relative;
+            height: 200vh;
+            width: 100vw;
+        }
+
+        .infoblock {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .info-item {
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        .img-item img {
+            position: absolute;
+        }
+
+        .one img {
+            left: 0;
+            top: 50px;
+        }
+
+        .two img {
+            left: 150px;
+        }
+
+        .three img {
+            left: 150px;
+            top: 300px;
+        }
+
+        .four img {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            top: 150px;
+        }
+
+        .five img {
+            right: 150px;
+            top: 0;
+        }
+
+        .six img {
+            right: 150px;
+            top: 450px;
+        }
+
+        .seven img {
+            right: 0;
+            top: 50px;
+        }
+
+        .infoblock {
+            position: absolute;
+            top: 200vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    </style>
+
+    <div class="header">
+        Header top some text
+    </div>
+    
+    <div class="grid-wrapper">
+
+        <div class="grid">
+            <div class="grid-container">
+                <div class="img-item one">
+                    <img src="img/item-1.jpg" alt="">
+                </div>
+                <div class="img-item two">
+                    <img src="img/item-2.jpg" alt="">
+                </div>
+                <div class="img-item three">
+                    <img src="img/item-3.jpg" alt="">
+                </div>
+                <div class="img-item four">
+                    <img src="img/ocean.jpg" alt="">
+                </div>
+                <div class="img-item five">
+                    <img src="img/item-5.jpg" alt="">
+                </div>
+                <div class="img-item six">
+                    <img src="img/item-6.jpg" alt="">
+                </div>
+                <div class="img-item seven">
+                    <img src="img/item-7.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <div class="infoblock">
+            <div class="info-item">
+                <img src="img/vacation-1.jpg" alt="">
+                <div class="info-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur nulla illum id earum rem pariatur, saepe aliquid iure magnam. Est.
+                </div>
+            </div>
+            <div class="info-item">
+                <img src="img/vacation-1.jpg" alt="">
+                <div class="info-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur nulla illum id earum rem pariatur, saepe aliquid iure magnam. Est.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/gsap/gsap.min.js"></script>
+	<script src="libs/gsap/ScrollTrigger.min.js"></script>
+
+	<script src="libs/waypoints/waypoints.min.js"></script>
+	<script src="libs/animate/animate-css.js"></script>
+	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
+	
+	<!-- <script src="js/common.js"></script> -->
+
+    <script>
+
+        const tl = gsap.timeline();
+
+        tl.to('.one', {x: '-600px', duration: 3}, 0)
+        tl.to('.two', {x: '-600px', duration: 3}, 0)
+        tl.to('.three', {x: '-600px', duration: 3}, 0)
+        tl.to('.five', {x: '600px', duration: 3}, 0)
+        tl.to('.six', {x: '600px', duration: 3}, 0)
+        tl.to('.seven', {x: '600px', duration: 3}, 0)
+        tl.to('.four img', {width: '100vw', top: '0', position: 'fixed', duration: 3}, 0)
+        tl.to('.infoblock', {top: '20vh', duration: 3}, 0)
+
+        ScrollTrigger.create({
+            animation: tl,
+            trigger: '.grid-wrapper',
+            markers: true,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 3,
+            pin: true
+        });
+
+
+    </script>
+</body>
+</html>
