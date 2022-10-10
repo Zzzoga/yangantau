@@ -839,12 +839,23 @@ select.guest {
 	overflow: hidden;
 }
 
+.sales__info, .afisha__info {
+	margin-right: 12px;
+	max-width: 300px;
+	padding: 0 0 36px 25px;
+}
+
+.sales__info {
+	transform: translateY(89px);
+	transition: all .5s ease;
+}
+
 .afisha__item:hover > .afisha-img-wrap > .afisha__img, 
 .sales__item:hover > .sales-img-wrap > .sales__img {
 	scale: 1.2;
 }
 
-.sales__item:hover > .sales-info-w,
+.sales__item:hover > .sales-info-w > .sales__info,
 .sales__item:hover > .sales-info-w > .sales__info > .sales__description {
 	transform: translateY(0);
 }
@@ -872,16 +883,7 @@ select.guest {
     justify-content: space-between;
     width: 100%;
 	transition: all .75s ease;
-}
-
-.sales-info-w {
-	transform: translateY(89px)
-}
-
-.sales__info, .afisha__info {
-	margin-right: 12px;
-	max-width: 300px;
-	padding: 0 0 36px 25px;
+	align-items: flex-end;
 }
 
 .afisha__info, .afisha__more {
