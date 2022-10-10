@@ -21,6 +21,7 @@
 
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/animate/animate.css">
+	<link rel="stylesheet" href="libs/aos/aos.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	
@@ -35,12 +36,6 @@
 <body>
 
 	<!-- Здесь пишем код -->
-	
-	<div class="hidden"></div>
-
-	<div class="loader">
-		<div class="loader_inner"></div>
-	</div>
 
 	<div class="header__container">
 		<header>
@@ -92,7 +87,10 @@
 				<div class="header__title">
 					<h2>Энергия <br>ОГНЯ И ВОДЫ</h2>
 				</div>
-				<img src="img/header-2.jpg" alt="">
+				<div class="video-overlay"></div>
+				<video autoplay loop muted class="bgvideo" id="bgvideo">
+					<source src="video/fire.mp4" type="video/mp4"></source>
+				</video>
 			</div>
 			<div class="slider-item">
 				<div class="header__title">
@@ -171,32 +169,68 @@
             </div>
         </div>
     
-        <div class="infoblock">
-            <div class="info-item first-item">
-                <img src="img/fullblock-item-1.jpg" alt="">
-				<div class="info-title">Люди</div>
-                <div class="info-text">
-                    <p>
-						Уровень культуры сервиса, душевная теплота и профессионализм сотрудников сделают ваш отдых богатым на положительные эмоции. Для большинства работающих здесь курорт — образ жизни и семейная история. Преемственность традиций поддерживают целые династии врачей, поваров и персонала.
-					</p>
-					<p>
-						Именно поэтому 20% гостей ежегодно приезжают за неизменно теплой дружеской атмосферой. Признание и любовь гостей нашли отражение в высоких рейтингах по отзывам — 5,0.
-					</p>
-                </div>
-            </div>
-            <div class="info-item second-item">
-                <img src="img/fullblock-item-2.jpg" alt="">
-				<div class="info-title">Медицина</div>
-                <div class="info-text">
-                    <p>
-						Научно-исследовательский центр эффективно использует доказанные лечебные свойства и еще неизученные загадки «чудесного пара» для улучшения самочувствия,  восстановления здоровья и радости жизни.
-					</p>
-					<p>
-						Здесь можно получить комплексное восстановительное лечение, при котором уникальные природные лечебные факторы сочетаются с современными реабилитационными методиками на высокотехнологичном оборудовании.
-					</p>
-                </div>
-            </div>
-        </div>
+        <div class="infoblock-wrapper">
+			<div class="infoblock">
+				<div class="infoblock-top">
+					<div class="info-item first-item">
+						<img src="img/fullblock-item-1.jpg" alt="">
+						<div class="info-title">Люди</div>
+						<div class="info-text">
+							<p>
+								Уровень культуры сервиса, душевная теплота и профессионализм сотрудников сделают ваш отдых богатым на положительные эмоции. Для большинства работающих здесь курорт — образ жизни и семейная история. Преемственность традиций поддерживают целые династии врачей, поваров и персонала.
+							</p>
+							<p>
+								Именно поэтому 20% гостей ежегодно приезжают за неизменно теплой дружеской атмосферой. Признание и любовь гостей нашли отражение в высоких рейтингах по отзывам — 5,0.
+							</p>
+						</div>
+					</div>
+					<div class="info-item second-item">
+						<img src="img/fullblock-item-2.jpg" alt="">
+						<div class="info-title">Медицина</div>
+						<div class="info-text">
+							<p>
+								Научно-исследовательский центр эффективно использует доказанные лечебные свойства и еще неизученные загадки «чудесного пара» для улучшения самочувствия,  восстановления здоровья и радости жизни.
+							</p>
+							<p>
+								Здесь можно получить комплексное восстановительное лечение, при котором уникальные природные лечебные факторы сочетаются с современными реабилитационными методиками на высокотехнологичном оборудовании.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="infoblock-bottom">
+					<div class="info-item third-item">
+						<img src="img/fullblock-item-3.jpg" alt="">
+						<div class="info-title">Питание</div>
+						<div class="info-text">
+							<p>
+								Блюда башкирской и европейской кухни, приготовленные из экологически чистых продуктов, предлагаются по системе диетического, заказного и «шведского» стола.
+							</p>
+							<p>
+								Визитная карточка курорта — разнообразное питание на самый взыскательный вкус. Блюда из фермерской продукции и деликатесы собственной эко-марки неизменно радуют и впечатляют гостей.
+							</p>
+						</div>
+					</div>
+					<div class="info-item fourth-item">
+						<img src="img/fullblock-item-4.jpg" alt="">
+						<div class="info-title">Размещение</div>
+						<div class="info-text">
+							<p>
+								Гостям доступно круглосуточное размещение в уютных номерах разных типов, в корпусах, расположенных на красивейшей территории геопарка «Янган-тау».
+							</p>
+							<p>
+								Уединенная локация в лесу геопарка или комфортабельный номер с теплыми переходами в процедурные кабинеты? Что бы вы ни выбрали, пребывание и лечение на геокурорте оказывает неизменный терапевтический эффект.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="infoblock-after">
+					<div class="infoblock-after-title">Само место</div>
+					<div class="infoblock-after-text">
+						Живописная природа геопарка с горой Янган-тау, источающей геотермальные пары и газы, обладающие уникальным лечебным эффектом. Здесь же расположен источник Кургазак, воды которого признаны лечебными. Пары, вода, климат – все служит на благо здоровью!
+					</div>
+				</div>
+			</div>
+		</div>
 
     </div>
 	</div>
@@ -205,8 +239,23 @@
 		<div class="map__inner">
 			<div class="map__title title">Территория</div>
 			<div class="map__slider">
-				<img src="img/map.png" alt="">
-			</div>
+				<svg class="map__before" width="1920" height="17" viewBox="0 0 1920 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="mask0_828_9281" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="17">
+					<rect x="1920" y="17" width="1920" height="17" transform="rotate(-180 1920 17)" fill="#D9D9D9"/>
+					</mask>
+					<g mask="url(#mask0_828_9281)">
+					<path d="M0 8.18586V-344.714C106.923 -343.686 184.449 -343.514 184.449 -343.514C203.178 -343.686 205.786 -344.5 252.373 -343.857C285.327 -343.386 335.588 -344.371 367.95 -343.686C382.293 -343.386 495.262 -343.9 543.152 -343.514C577.292 -343.214 563.423 -343.428 588.198 -343.986C636.444 -345.014 651.973 -343.3 676.392 -343.686C713.969 -344.286 741.826 -344.286 772.173 -343.857C887.157 -342.271 889.528 -345.229 1020.99 -344.029C1041.73 -343.857 1134.79 -343.428 1189.55 -344.071C1225.35 -344.5 1255.34 -344.5 1276.33 -344.114C1310.11 -343.514 1375.19 -342.614 1419.76 -344.071C1439.67 -344.714 1511.87 -344.114 1519.45 -344.114C1582.99 -344.414 1606.22 -342.143 1652.45 -342.4C1724.76 -342.786 1739.11 -345.1 1780 -344.114C1802.74 -343.428 1843.6 -344.286 1881.51 -344.286C1899.27 -344.928 1906.38 -345.143 1911.71 -344.928C1914.67 -344.928 1918.82 -345.143 1920 -345.143V8.42861C1916.45 8.42862 1901.5 10.7858 1889 10.7858C1876.5 10.7858 1856.5 7.78576 1844.5 7.78576C1835 7.78576 1780.5 11.2143 1770.5 11.2143C1759.5 11.2143 1651.5 5.85719 1630 5.85719C1615 5.85719 1539.5 11.8572 1524 11.8572C1520 11.8572 1434.03 8.22872 1414 8.27158C1378.5 8.27157 1344 11.8572 1288 11.8572C1232 11.8572 1206.3 7.31435 1170.5 6.92862C1115.62 6.3286 1076.5 11.8572 1020 11.8572C978 11.8572 833.5 7.15725 806 7.15725C775.535 7.58583 702.5 13.5715 678.5 13.5715C662 13.5715 607.5 8.10014 579.775 8.10014C560 8.10014 522.64 11.5572 488.5 11.8572C440.61 12.2858 398.843 7.84299 384.5 8.18586C355 7.95723 279.836 11.3429 247 11.8572C200.414 12.5858 153.5 16.7858 142.5 16.7858C131.5 16.7858 40.5 9.71434 0 8.18586Z" fill="#FAF5E9"/>
+					</g>
+				</svg>
+				<div class="map__slider-items">
+					<div class="map__slider-item">
+						<img src="img/map-cloud-full.jpg" alt="">
+					</div>
+				</div>
+				<svg class="map__after" width="1920" height="35" viewBox="0 0 1920 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1920 20.5665V844C1813.08 841.6 1735.55 841.2 1735.55 841.2C1716.82 841.6 1714.21 843.5 1667.63 842C1634.67 840.9 1584.41 843.2 1552.05 841.6C1537.71 840.9 1424.74 842.1 1376.85 841.2C1342.71 840.5 1356.58 841 1331.8 842.3C1283.56 844.7 1268.03 840.7 1243.61 841.6C1206.03 843 1178.17 843 1147.83 842C1032.84 838.3 1030.47 845.2 899.011 842.4C878.266 842 785.212 841 730.446 842.5C694.647 843.5 664.656 843.5 643.675 842.6C609.891 841.2 544.812 839.1 500.241 842.5C480.326 844 408.135 842.6 400.548 842.6C337.011 843.3 313.777 838 267.546 838.6C195.236 839.5 180.893 844.9 139.996 842.6C117.261 841 76.3973 843 38.4948 843C20.7279 844.5 13.6212 845 8.29118 844.5C5.33004 844.5 1.18445 845 0 845V20C3.55336 20 18.5 14.5 31 14.5C43.5 14.5 63.5 21.5 75.5 21.5C85 21.5 139.5 13.5 149.5 13.5C160.5 13.5 268.5 26 290 26C305.001 26 380.5 12 396 12C400 12 485.967 20.4664 506 20.3664C541.5 20.3665 576 12 632 12C688 12 713.701 22.6 749.5 23.5C804.384 24.9001 843.5 12 900 12C942 12 1086.5 22.9666 1114 22.9666C1144.46 21.9665 1217.5 8.00002 1241.5 8.00002C1258 8.00002 1312.5 20.7665 1340.23 20.7665C1360 20.7665 1397.36 12.7 1431.5 12C1479.39 11 1521.16 21.3665 1535.5 20.5665C1565 21.0999 1640.16 13.2001 1673 12C1719.59 10.3 1766.5 0.500021 1777.5 0.5C1788.5 0.499979 1879.5 17 1920 20.5665Z" fill="#FAF5E9"/>
+					</svg>
+			</div>	
 		</div>
 	</div>
 
@@ -214,16 +263,46 @@
 		<div class="programms__inner">
 			<div class="programms__title title">Программы отдыха и лечения</div>
 			<div class="programms__items">
-				<a class="programms__item" href="#">
-					<img src="img/programm-1.jpg" alt="">
-					<div class="programms__item-title">Базовая</div>
-				</a>
-				<a class="programms__item" href="#">
-					<img src="img/programm-1.jpg" alt="">
-					<div class="programms__item-title">Кастомная</div>
-				</a>
+				<div class="programms__item">
+					<div class="programms__item-text">
+						<div class="programms__item-programm">Программа</div>
+						<div class="programms__item-title">Базовая</div>
+						<div class="programms__item-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						</div>
+						<div class="programms__item-more">
+							<a class="programms__btn" href="#">
+								<span class="programms__icon"></span>
+								<span class="programms__text">Подробнее</span>
+							</a>
+						</div>
+					</div>
+					<div class="programms__item-img">
+						<img src="img/programms-1.jpg" alt="" class="programms-first-img">
+					</div>
+				</div>
+				<div class="programms__item">
+					<div class="programms__item-text">
+						<div class="programms__item-programm">Программа</div>
+						<div class="programms__item-title">Кастомная</div>
+						<div class="programms__item-text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						</div>
+						<div class="programms__item-more">
+							<a class="programms__btn" href="#">
+								<span class="programms__icon"></span>
+								<span class="programms__text">Подробнее</span>
+							</a>
+						</div>
+					</div>
+					<div class="programms__item-img">
+						<img src="img/programms-2.jpg" alt="" class="programms-second-img">
+					</div>
+				</div>
 			</div>
-			<a class="programms__btn" href="#">
+			<a class="programms__btn programms__btn-after" href="#">
 				<span class="programms__icon"></span>
 				<span class="programms__text">Все программы</span>
 			</a>
@@ -235,44 +314,60 @@
 			<div class="sales__title title">Акции и предложения</div>
 			<div class="sales__list">
 				<div class="sales__item">
-					<img src="img/sales.jpg" alt="" class="sales__img">
-					<div class="sales__info">
-						<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
-						<div class="sales__description">
-							До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
-						</div>
+					<div class="sales-img-wrap">
+						<img src="img/sales.jpg" alt="" class="sales__img">
 					</div>
-					<a href="#" class="sales__more more-btn"></a>
+					<div class="sales-info-w">
+						<div class="sales__info">
+							<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
+							<div class="sales__description">
+								До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
+							</div>
+						</div>
+						<a href="#" class="sales__more more-btn"></a>
+					</div>
 				</div>
 				<div class="sales__item">
-					<img src="img/sales.jpg" alt="" class="sales__img">
-					<div class="sales__info">
-						<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
-						<div class="sales__description">
-							До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
-						</div>
+					<div class="sales-img-wrap">
+						<img src="img/sales.jpg" alt="" class="sales__img">
 					</div>
-					<a href="#" class="sales__more more-btn"></a>
+					<div class="sales-info-w">
+						<div class="sales__info">
+							<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
+							<div class="sales__description">
+								До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
+							</div>
+						</div>
+						<a href="#" class="sales__more more-btn"></a>
+					</div>
 				</div>
 				<div class="sales__item">
-					<img src="img/sales.jpg" alt="" class="sales__img">
-					<div class="sales__info">
-						<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
-						<div class="sales__description">
-							До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
-						</div>
+					<div class="sales-img-wrap">
+						<img src="img/sales.jpg" alt="" class="sales__img">
 					</div>
-					<a href="#" class="sales__more more-btn"></a>
+					<div class="sales-info-w">
+						<div class="sales__info">
+							<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
+							<div class="sales__description">
+								До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
+							</div>
+						</div>
+						<a href="#" class="sales__more more-btn"></a>
+					</div>
 				</div>
 				<div class="sales__item">
-					<img src="img/sales.jpg" alt="" class="sales__img">
-					<div class="sales__info">
-						<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
-						<div class="sales__description">
-							До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
-						</div>
+					<div class="sales-img-wrap">
+						<img src="img/sales.jpg" alt="" class="sales__img">
 					</div>
-					<a href="#" class="sales__more more-btn"></a>
+					<div class="sales-info-w">
+						<div class="sales__info">
+							<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
+							<div class="sales__description">
+								До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
+							</div>
+						</div>
+						<a href="#" class="sales__more more-btn"></a>
+					</div>
 				</div>
 				
 			</div>
@@ -281,107 +376,165 @@
 
 	<div class="medical">
 		<div class="medical__inner">
-			<div class="nature">
-				<img src="img/nature.jpg" alt="">
-				<div class="medical__info">
-					<div class="medical__title">Природно-лечебные факторы</div>
-					<div class="medical__list">
-						<ul>
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Lorem ipsum dolor sit amet.</li>
-						</ul>
+			<div class="medical-infoblocks">
+				<div class="medical__title">
+					Лечебная база
+				</div>
+				<div class="medical__items">
+					<div class="medical__item">
+						<div class="medical__item-title">Природно-лечебные <br>факторы</div>
+						<div class="medical__item-img">
+							<img src="img/medical-item-1.svg" alt="">
+						</div>
+						<div class="medical__item-text">
+							<ul class="medical__item-list">
+								<li class="medical__item-link">геотермальный феномен горы Янган-тау</li>
+								<li class="medical__item-link">гипотермальный источник Кургазак</li>
+								<li class="medical__item-link">высококлассный санаторий «Янган-тау»</li>
+								<li class="medical__item-link">Куселяровские сероводородные источники</li>
+							</ul>
+						</div>
+					</div>
+					<div class="medical__item">
+						<div class="medical__item-title">Медико-исследовательский центр</div>
+						<div class="medical__item-img">
+							<img src="img/medical-item-1.svg" alt="">
+						</div>
+						<div class="medical__item-text">
+							<ul class="medical__item-list">
+								<li class="medical__item-link">геотермальный феномен горы Янган-тау</li>
+								<li class="medical__item-link">гипотермальный источник Кургазак</li>
+								<li class="medical__item-link">высококлассный санаторий «Янган-тау»</li>
+								<li class="medical__item-link">Куселяровские сероводородные источники</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="explore">
-				<img src="img/explore.jpg" alt="">
-				<div class="medical__info">
-					<div class="medical__title">Медико-исследовательский центр</div>
-					<div class="medical__list">
-						<ul>
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Lorem ipsum dolor sit amet.</li>
-						</ul>
+			<div class="medical__outer">
+				<div class="medical-form__wrapper">
+					<div class="medical-img">
+						<img src="img/medical-form.jpg" alt="">
+					</div>
+					<div class="medical-form">
+						<div class="medical-form-title">
+							Бесплатная медицинская консультация
+						</div>
+						<div class="medical-form-inputs">
+							<div class="medical-form-item">
+								<input type="text" name="medical-name" id="medical-name" class="medical-input" placeholder="Имя">
+								<input type="tel" name="medical-phone" id="medical-phone" class="medical-input" placeholder="Телефон">
+							</div>
+							<div class="medical-form-item">
+								<div class="personal-check">
+									<input type="checkbox" name="personal" id="medical" class="custom-checkbox">
+									<label for="medical">Согласие на обработку персональных данных</label>
+								</div>
+							</div>
+							<div class="medical-form-item">
+								<input type="submit" value="Отправить" class="medical-submit">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="vacation">
-		<div class="vacation__inner">
-			<div class="vacation__title title">Отдых</div>
-			<div class="vacation__blocks">
-				<div class="vacation__item">
-					<img src="img/vacation-1.jpg" alt="">
-					<div class="v-item-title">Спорт</div>
-					<div class="v-item-text">Современный спортивный комплекс со стадионом, детской зоной, тренажерным залом, сауной.</div>
+	<div class="scroll-container">
+		<div class="vacation">
+			<div class="vacation__inner">
+				<div class="vacation__title title">Отдых</div>
+				<div class="vacation__blocks">
+					<div class="vacation__item first__vac">
+						<div class="v-item-img v-item-img-first">
+							<img src="img/vac-1.jpg" alt="">
+						</div>
+						<div class="v-item-title">Спорт</div>
+						<div class="v-item-text">Современный спортивный комплекс со стадионом, детской зоной, тренажерным залом, сауной.</div>
+					</div>
+					<div class="vacation__item second__vac">
+						<div class="v-item-img v-item-img-second">
+							<img src="img/vac-2.jpg" alt="">
+						</div>
+						<div class="v-item-title">Лошади</div>
+						<div class="v-item-text">Конно-спортивный комплекс «Юртак» с центром иппотерапии и кумысолечением.</div>
+					</div>
+					<div class="vacation__item third__vac">
+						<div class="v-item-img v-item-img-third">
+							<img src="img/vac-3.jpg" alt="">
+						</div>
+						<div class="v-item-title">Сезонные развлечения</div>
+						<div class="v-item-text">Туристический, горнолыжный, оздоровительный комплекс, экскурсионные маршруты и досуговые мероприятия.</div>
+					</div>
 				</div>
-				<div class="vacation__item">
-					<img src="img/vacation-2.jpg" alt="">
-					<div class="v-item-title">Лошади</div>
-					<div class="v-item-text">Конно-спортивный комплекс «Юртак» с центром иппотерапии и кумысолечением.</div>
-				</div>
-				<div class="vacation__item">
-					<img src="img/vacation-3.jpg" alt="">
-					<div class="v-item-title">Сезонные развлечения</div>
-					<div class="v-item-text">Туристический, горнолыжный, оздоровительный комплекс, экскурсионные маршруты и досуговые мероприятия.</div>
-				</div>
+				<a class="programms__btn" href="#">
+					<span class="programms__icon"></span>
+					<span class="programms__text">Все программы</span>
+				</a>
 			</div>
-			<a class="programms__btn" href="#">
-				<span class="programms__icon"></span>
-				<span class="programms__text">Все программы</span>
-			</a>
 		</div>
-	</div>
-
-	<div class="afisha">
-		<div class="afisha__inner">
-			<div class="afisha__title title">Афиша событий</div>
-			<div class="afisha__list">
-				<div class="afisha__item">
-					<img src="img/afisha-1.jpg" alt="" class="afisha__img">
-					<div class="afisha__info">
-						<div class="afisha__item-date">15.07.2022</div>
-						<div class="afisha__text">
-							Турнир по борьбе «Корэш»
+	
+		<div class="afisha">
+			<div class="afisha__inner">
+				<div class="afisha__title title">Афиша событий</div>
+				<div class="afisha__list">
+					<div class="afisha__item">
+						<div class="afisha-img-wrap">
+							<img src="img/afisha-1.jpg" alt="" class="afisha__img">
+						</div>
+						<div class="afisha-info-w">
+							<div class="afisha__info">
+								<div class="afisha__item-date">15.07.2022</div>
+								<div class="afisha__text">
+									Турнир по борьбе «Корэш»
+								</div>
+							</div>
+							<a href="#" class="afisha__more more-btn"></a>
 						</div>
 					</div>
-					<a href="#" class="afisha__more more-btn"></a>
-				</div>
-				<div class="afisha__item">
-					<img src="img/afisha-1.jpg" alt="" class="afisha__img">
-					<div class="afisha__info">
-						<div class="afisha__item-date">23.06.2022</div>
-						<div class="afisha__text">
-							День медицинского работника
+					<div class="afisha__item">
+						<div class="afisha-img-wrap">
+							<img src="img/afisha-1.jpg" alt="" class="afisha__img">
+						</div>
+						<div class="afisha-info-w">
+							<div class="afisha__info">
+								<div class="afisha__item-date">15.07.2022</div>
+								<div class="afisha__text">
+									Турнир по борьбе «Корэш»
+								</div>
+							</div>
+							<a href="#" class="afisha__more more-btn"></a>
 						</div>
 					</div>
-					<a href="#" class="afisha__more more-btn"></a>
-				</div>
-				<div class="afisha__item">
-					<img src="img/afisha-1.jpg" alt="" class="afisha__img">
-					<div class="afisha__info">
-						<div class="afisha__item-date">16.08.2022</div>
-						<div class="afisha__text">
-							Праздник плуга
+					<div class="afisha__item">
+						<div class="afisha-img-wrap">
+							<img src="img/afisha-1.jpg" alt="" class="afisha__img">
+						</div>
+						<div class="afisha-info-w">
+							<div class="afisha__info">
+								<div class="afisha__item-date">15.07.2022</div>
+								<div class="afisha__text">
+									Турнир по борьбе «Корэш»
+								</div>
+							</div>
+							<a href="#" class="afisha__more more-btn"></a>
 						</div>
 					</div>
-					<a href="#" class="afisha__more more-btn"></a>
-				</div>
-				<div class="afisha__item">
-					<img src="img/afisha-1.jpg" alt="" class="afisha__img">
-					<div class="afisha__info">
-						<div class="afisha__item-date">31.08.2022</div>
-						<div class="afisha__text">
-							День открытых дверей в Янган-Тау
+					<div class="afisha__item">
+						<div class="afisha-img-wrap">
+							<img src="img/afisha-1.jpg" alt="" class="afisha__img">
+						</div>
+						<div class="afisha-info-w">
+							<div class="afisha__info">
+								<div class="afisha__item-date">15.07.2022</div>
+								<div class="afisha__text">
+									Турнир по борьбе «Корэш»
+								</div>
+							</div>
+							<a href="#" class="afisha__more more-btn"></a>
 						</div>
 					</div>
-					<a href="#" class="afisha__more more-btn"></a>
 				</div>
 			</div>
 		</div>
@@ -530,13 +683,15 @@
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
 
+
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
 	<script src="libs/gsap/gsap.min.js"></script>
 	<script src="libs/gsap/ScrollTrigger.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
 	<script src="libs/waypoints/waypoints.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
+	<script src="libs/aos/aos.js"></script>
 	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
 	
 	<script src="js/common.js"></script>
