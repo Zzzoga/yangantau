@@ -484,11 +484,16 @@ select.guest {
 }
 
 .infoblock-after {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 180vh;
+    max-width: 1620px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .infoblock-after-title {
@@ -520,7 +525,6 @@ select.guest {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	top: 200vh;
 }
 
 .infoblock-top, .infoblock-bottom {
@@ -536,10 +540,10 @@ select.guest {
 }
 
 .info-item {
+	position: absolute;
 	max-width: 526px;
 	display: flex;
 	flex-direction: column;
-	margin-right: 294px;
 }
 
 .info-item:last-child {
@@ -629,7 +633,7 @@ select.guest {
 /* Map */
 
 .map {
-    margin-top: 483px;
+    margin-top: 250px;
 }
 
 .map__inner {
@@ -660,6 +664,126 @@ select.guest {
 	bottom: 0;
 	left: 0;
 }
+
+.left-cloud, .right-cloud {
+	position: absolute;
+	top: -170px;
+}
+
+.left-cloud {
+	left: 0;
+	z-index: 1;
+	transition: all 1.5s ease;
+}
+
+.right-cloud {
+	right: 0;
+	z-index: 1;
+	transition: all 1.5s ease;
+}
+
+.icons img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.icons img.vosduh {
+	top: 370px;
+	left: 362px;
+}
+
+.icons img.banya {
+	top: 665px;
+	left: 558px;
+}
+
+.icons img.dom-1 {
+	top: 365px;
+	left: 705px;
+}
+
+.icons img.dom-2 {
+	top: 412px;
+	left: 860px;
+}
+
+.icons img.dom-3 {
+	top: 425px;
+	left: 971px;
+}
+
+.icons img.dom-4 {
+	top: 480px;
+	left: 1065px;
+}
+
+.icons img.dom-5 {
+	top: 530px;
+	left: 1168px;
+}
+
+.icons img.dom-6 {
+	top: 615px;
+	left: 1313px;
+}
+
+.icons img.dom-7 {
+	top: 515px;
+	left: 1463px;
+}
+
+.icons img.domik-1 {
+	top: 180px;
+	left: 775px;
+}
+
+.icons img.magazin {
+	top: 145px;
+	left: 638px;
+}
+
+.icons img.lestnica-1 {
+	top: 485px;
+	left: 438px;
+}
+
+.icons img.lupa {
+	top: 280px;
+	left: 645px;
+}
+
+.icons img.lestnica-2 {
+	top: 282px;
+	left: 764px;
+}
+
+.icons img.venik {
+	top: 216px;
+	left: 915px;
+}
+
+.icons img.serdce {
+	top: 250px;
+	left: 1074px;
+}
+
+.icons img.instrumenti {
+	top: 340px;
+	left: 1290px;
+}
+
+.icons img.sport {
+	top: 383px;
+	left: 1473px;
+}
+
+.icons img.domik-2 {
+	top: 669px;
+	left: 1512px;
+}
+
+
 
 /* Programms */
 
@@ -778,7 +902,8 @@ select.guest {
 .programms__icon {
 	width: 85px;
 	height: 40px;
-	background: url(../img/programms-arrow.svg) no-repeat center center;
+	background: url(../img/white-red-arrow.svg) no-repeat center center;
+	background-position: -87px center;
 	border: 1px solid #E31F25;
 	margin-right: 13px;
 	transition: all .5s ease;
@@ -803,8 +928,8 @@ select.guest {
 }
 
 .programms__btn:hover > .programms__icon {
-	background-image: url(../img/programms-arrow-white.svg);
-	background-position: center center;
+	background-image: url(../img/white-red-arrow.svg);
+	background-position: 0px center;
 	background-repeat: no-repeat;
 	background-color: #E31F25;
 }
@@ -845,12 +970,12 @@ select.guest {
 	padding: 0 0 36px 25px;
 }
 
-.sales__info {
+.sales__item-title {
 	transform: translateY(89px);
 	transition: all .5s ease;
 }
 
-.afisha__item:hover > .afisha-img-wrap > .afisha__img, 
+/* .afisha__item:hover > .afisha-img-wrap > .afisha__img, 
 .sales__item:hover > .sales-img-wrap > .sales__img {
 	scale: 1.2;
 }
@@ -858,7 +983,7 @@ select.guest {
 .sales__item:hover > .sales-info-w > .sales__info,
 .sales__item:hover > .sales-info-w > .sales__info > .sales__description {
 	transform: translateY(0);
-}
+} */
 
 .afisha__item {
 	align-items: flex-start;
@@ -919,15 +1044,15 @@ select.guest {
 	font-size: 14px;
 	line-height: 17px;
 	color: #F7F7F7;
-	transition: all 1s ease;
+	transition: all .5s ease;
 	transform: translateY(120px)
 }
 
 .sales__more, .afisha__more {
 	height: 50px;
 	width: 50px;
-	background-image: url(../img/cut-white-arrow.svg);
-	background-position: center center;
+	background-image: url(../img/white-red-arrow.svg);
+	background-position: -20px center;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,0);
 	border: 1px solid #F7F7F7;
@@ -936,8 +1061,8 @@ select.guest {
 }
 
 .sales__more:hover, .afisha__more:hover {
-	background-image: url(../img/cut-red-arrow.svg);
-	background-position: center center;
+	background-image: url(../img/white-red-arrow.svg);
+	background-position: -104px center;
 	background-repeat: no-repeat;
 	background-color: rgba(255,255,255,1);
 }
@@ -960,8 +1085,9 @@ select.guest {
 
 .medical-infoblocks {
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 439px;
+    justify-content: space-between;
+    margin-bottom: 439px;
+    position: relative;
 }
 
 .medical__items {
