@@ -35,9 +35,15 @@
 
 <body>
 
+	<!-- Preloader -->
+
+	<div id="preloader">
+		<div id="loader"></div>
+	  </div>
+
 	<!-- Здесь пишем код -->
 
-	<div class="header__container" data-aos="fade-down" data-aos-duration="1500">
+	<div class="header__container" data-aos="fade-down" data-aos-duration="2000">
 		<header>
 			<div class="left">
 				<div class="nav">
@@ -50,7 +56,7 @@
 				<a href="#" class="buy__btn">Купить путевку</a>
 			</div>
 			<div class="middle">
-				<a href="#" class="logo"><img src="img/logo.svg" alt=""></a>
+				<a href="#" class="logo"><img src="img/fixed-logo.svg" alt=""></a>
 			</div>
 			<div class="right">
 				<a href="#" class="geo">Геопарк</a>
@@ -58,7 +64,7 @@
 			</div>
 		</header>
 
-		<div class="header" data-aos="fade-down" data-aos-duration="1500">
+		<div class="header" >
 			<div class="booking">
 				<input type="date" name="check-in" id="check-in" class="check-in form-input">
 				<input type="date" name="check-out" id="check-out" class="check-out form-input">
@@ -82,7 +88,8 @@
 					<h2>Курорт в геопарке <br>ЮНЕСКО</h2>
 				</div>
 				<div class="video-overlay"></div>
-				<video autoplay loop muted class="bgvideo" id="bgvideo">
+				<video autoplay loop muted class="bgvideo" id="bgvideo" preload="none" poster=
+				"img/prevideo-1.jpg">
 					<source src="video/kurort.mp4" type="video/mp4"></source>
 				</video>
 			</div>
@@ -92,15 +99,18 @@
 				</div>
 				<div class="video-overlay"></div>
 				<video autoplay loop muted class="bgvideo" id="bgvideo">
-					<source src="video/fire.mp4" type="video/mp4"></source>
+					<source src="video/fire.mp4" type="video/mp4" preload="none" poster=
+					"img/prevideo-2.jpg"></source>
 				</video>
 			</div>
 			<div class="slider-item">
 				<div class="header__title">
 					<h2>Все <br>ПО-НАСТОЯЩЕМУ</h2>
 				</div>
+				<div class="video-overlay"></div>
 				<video autoplay loop muted class="bgvideo" id="bgvideo">
-					<source src="video/kurort.mp4" type="video/mp4"></source>
+					<source src="video/kurort.mp4" type="video/mp4" preload="none" poster=
+					"img/prevideo-3.jpg"></source>
 				</video>
 			</div>
 		</div>
@@ -143,7 +153,7 @@
 	</div> -->
 
 	<div class="full-wrapper">
-		<div class="intro__title title" data-aos="fade-down" data-aos-duration="1500">Сделайте Янган-Тау частью своей жизни</div>
+		<div class="intro__title title">Сделайте Янган-Тау частью своей жизни</div>
 
     <div class="grid-wrapper">
 
@@ -176,60 +186,48 @@
     
         <div class="info-wrapper">
 			<div class="infoblock-after">
-				<div class="infoblock-after-title">Само место</div>
+				<div class="infoblock-after-title">УНИКАЛЬНОЕ МЕСТО</div>
 				<div class="infoblock-after-text">
-					Живописная природа геопарка с горой Янган-тау, источающей геотермальные пары и газы, обладающие уникальным лечебным эффектом. Здесь же расположен источник Кургазак, воды которого признаны лечебными. Пары, вода, климат – все служит на благо здоровью!
+					ЗДЕСЬ СЛИВАЮТСЯ ВОЕДИНО: <br>ЖИВОПИСНОСТЬ ПРИРОДЫ ГЕОПАРКА, ЛЕЧЕБНЫЕ СВОЙСТВА ГЕОТЕРМАЛЬНЫХ ИСТОЧНИКОВ И ПРОФЕССИОНАЛИЗМ СОТРУДНИКОВ.
 				</div>
 			</div>
 
 			<div class="info-item first-item">
-				<img src="img/fullblock-item-1.jpg" alt="">
-				<div class="info-title">Люди</div>
+				<img src="img/fullblock-i-1.jpg" alt="">
+				<div class="info-title">Восстановление здоровья</div>
 				<div class="info-text">
 					<p>
-						Уровень культуры сервиса, душевная теплота и профессионализм сотрудников сделают ваш отдых богатым на положительные эмоции. Для большинства работающих здесь курорт — образ жизни и семейная история. Преемственность традиций поддерживают целые династии врачей, поваров и персонала.
-					</p>
-					<p>
-						Именно поэтому 20% гостей ежегодно приезжают за неизменно теплой дружеской атмосферой. Признание и любовь гостей нашли отражение в высоких рейтингах по отзывам — 5,0.
+						Комплексное оздоровительное лечение: природа и современные реабилитационные методики.
 					</p>
 				</div>
 			</div>
 			
 			<div class="info-item third-item">
-				<img src="img/fullblock-item-3.jpg" alt="">
-				<div class="info-title">Питание</div>
+				<img src="img/fullblock-i-3.jpg" alt="">
+				<div class="info-title">Теплая дружеская атмосфера</div>
 				<div class="info-text">
 					<p>
-						Блюда башкирской и европейской кухни, приготовленные из экологически чистых продуктов, предлагаются по системе диетического, заказного и «шведского» стола.
-					</p>
-					<p>
-						Визитная карточка курорта — разнообразное питание на самый взыскательный вкус. Блюда из фермерской продукции и деликатесы собственной эко-марки неизменно радуют и впечатляют гостей.
+						Преемственность поколений персонала, качественная культура сервиса и профессионализм сотрудников сделают ваш отдых богатым на положительные эмоции.
 					</p>
 				</div>
 			</div>
 
 			<div class="info-item second-item">
-				<img src="img/fullblock-item-2.jpg" alt="">
-				<div class="info-title">Медицина</div>
+				<img src="img/fullblock-i-2.jpg" alt="">
+				<div class="info-title">Энергия продуктов башкирской земли</div>
 				<div class="info-text">
 					<p>
-						Научно-исследовательский центр эффективно использует доказанные лечебные свойства и еще неизученные загадки «чудесного пара» для улучшения самочувствия,  восстановления здоровья и радости жизни.
-					</p>
-					<p>
-						Здесь можно получить комплексное восстановительное лечение, при котором уникальные природные лечебные факторы сочетаются с современными реабилитационными методиками на высокотехнологичном оборудовании.
+						Блюда башкирской и европейской кухонь курорта готовятся из экологически чистой фермерской продукции.
 					</p>
 				</div>
 			</div>
 
 			<div class="info-item fourth-item">
-				<img src="img/fullblock-item-4.jpg" alt="">
-				<div class="info-title">Размещение</div>
+				<img src="img/fullblock-i-4.jpg" alt="">
+				<div class="info-title">Комфортный выбор для гостей</div>
 				<div class="info-text">
 					<p>
-						Гостям доступно круглосуточное размещение в уютных номерах разных типов, в корпусах, расположенных на красивейшей территории геопарка «Янган-тау».
-					</p>
-					<p>
-						Уединенная локация в лесу геопарка или комфортабельный номер с теплыми переходами в процедурные кабинеты? Что бы вы ни выбрали, пребывание и лечение на геокурорте оказывает неизменный терапевтический эффект.
+						Круглосуточное размещение в уединенных локациях в лесу геопарка или в уютных корпусах с теплыми переходами до процедурных кабинетов. Выбор за вами!
 					</p>
 				</div>
 			</div>
@@ -241,7 +239,7 @@
 
 	<div class="map">
 		<div class="map__inner">
-			<div class="map__title title" data-aos="fade-down" data-aos-duration="1500">Территория</div>
+			<div class="map__title title" >Территория</div>
 			<div class="map__slider">
 				<svg class="map__before" width="1920" height="17" viewBox="0 0 1920 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<mask id="mask0_828_9281" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="17">
@@ -277,6 +275,27 @@
 								<img src="img/lupa.svg" alt="" class="lupa">
 								<img src="img/lestnica.svg" alt="" class="lestnica-2">
 							</div>
+							<div class="icons-stick">
+								<div class="stick-1">Лестница 1000 ступеней</div>
+								<div class="stick-2">Lorem, ipsum dolor.</div>
+								<div class="stick-3">Lorem, ipsum dolor.</div>
+								<div class="stick-4">Lorem, ipsum dolor.</div>
+								<div class="stick-5">Lorem, ipsum dolor.</div>
+								<div class="stick-6">Lorem, ipsum dolor.</div>
+								<div class="stick-7">Lorem, ipsum dolor.</div>
+								<div class="stick-8">Lorem, ipsum dolor.</div>
+								<div class="stick-9">Lorem, ipsum dolor.</div>
+								<div class="stick-10">Lorem, ipsum dolor.</div>
+								<div class="stick-11">Lorem, ipsum dolor.</div>
+								<div class="stick-12">Lorem, ipsum dolor.</div>
+								<div class="stick-13">Lorem, ipsum dolor.</div>
+								<div class="stick-14">Lorem, ipsum dolor.</div>
+								<div class="stick-15">Lorem, ipsum dolor.</div>
+								<div class="stick-16">Lorem, ipsum dolor.</div>
+								<div class="stick-17">Lorem, ipsum dolor.</div>
+								<div class="stick-18">Lorem, ipsum dolor.</div>
+								<div class="stick-19">Lorem, ipsum dolor.</div>
+							</div>
 							<img src="img/map-cloud-full.jpg" alt="">
 						</div>
 					</div>
@@ -290,15 +309,15 @@
 
 	<div class="programms">
 		<div class="programms__inner">
-			<div class="programms__title title" data-aos="fade-down" data-aos-duration="1500">Программы отдыха и лечения</div>
+			<div class="programms__title title" >Программы отдыха и лечения</div>
 			<div class="programms__items">
-				<div class="programms__item" data-aos="fade-right" data-aos-duration="1500">
+				<div class="programms__item" >
 					<div class="programms__item-text">
 						<div class="programms__item-programm">Программа</div>
 						<div class="programms__item-title">Базовая</div>
 						<div class="programms__item-text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							<p>В программу входит: осмотр лечащего врача-терапевта, консультация узкого специалиста на выбор, наблюдение, бальнеологическое лечение и процедуры, усиливающие эффект бальнеотерапии, климатотерапия.
+							</p>
 						</div>
 						<div class="programms__item-more">
 							<a class="programms__btn" href="#">
@@ -311,13 +330,13 @@
 						<img src="img/programms-1.jpg" alt="" class="programms-first-img">
 					</div>
 				</div>
-				<div class="programms__item" data-aos="fade-right" data-aos-duration="1500">
+				<div class="programms__item" >
 					<div class="programms__item-text">
 						<div class="programms__item-programm">Программа</div>
 						<div class="programms__item-title">Кастомная</div>
 						<div class="programms__item-text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							<p>После консультации со специалистом вы можете настроить лечебно-восстановительную программу под вашу цель лечения.
+							</p>
 						</div>
 						<div class="programms__item-more">
 							<a class="programms__btn" href="#">
@@ -338,7 +357,7 @@
 		</div>
 	</div>
 
-	<div class="sales" data-aos="fade-left" data-aos-duration="1500">
+	<div class="sales" >
 		<div class="sales__inner">
 			<div class="sales__title title">Акции и предложения</div>
 			<div class="sales__list">
@@ -358,11 +377,11 @@
 				</div>
 				<div class="sales__item">
 					<div class="sales-img-wrap">
-						<img src="img/sales.jpg" alt="" class="sales__img">
+						<img src="img/sales-2.jpg" alt="" class="sales__img">
 					</div>
 					<div class="sales-info-w">
 						<div class="sales__info">
-							<div class="sales__item-title">Восстанови здоровье в «Янган-тау»!</div>
+							<div class="sales__item-title">Планируйте свой отдых вместе с детьми!</div>
 							<div class="sales__description">
 								До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
 							</div>
@@ -386,6 +405,20 @@
 				</div>
 				<div class="sales__item">
 					<div class="sales-img-wrap">
+						<img src="img/sales-2.jpg" alt="" class="sales__img">
+					</div>
+					<div class="sales-info-w">
+						<div class="sales__info">
+							<div class="sales__item-title">Планируйте свой отдых вместе с детьми!</div>
+							<div class="sales__description">
+								До 31.08.2022 при бронировании путевок на сезон «Осень-зима 2022» получите специальные цены на посещение горнолыжного комплекса «Беркут»
+							</div>
+						</div>
+						<a href="#" class="sales__more more-btn"></a>
+					</div>
+				</div>
+				<div class="sales__item">
+					<div class="sales-img-wrap">
 						<img src="img/sales.jpg" alt="" class="sales__img">
 					</div>
 					<div class="sales-info-w">
@@ -398,7 +431,6 @@
 						<a href="#" class="sales__more more-btn"></a>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</div>
@@ -406,10 +438,10 @@
 	<div class="medical">
 		<div class="medical__inner" >
 			<div class="medical-infoblocks">
-				<div class="medical__title" data-aos="fade-right" data-aos-duration="1500">
+				<div class="medical__title" >
 					Лечебная база
 				</div>
-				<div class="medical__items" data-aos="fade-left" data-aos-duration="1500">
+				<div class="medical__items" >
 					<div class="medical__item">
 						<div class="medical__item-title">Природно-лечебные <br>факторы</div>
 						<div class="medical__item-img">
@@ -417,10 +449,12 @@
 						</div>
 						<div class="medical__item-text">
 							<ul class="medical__item-list">
-								<li class="medical__item-link">геотермальный феномен горы Янган-тау</li>
-								<li class="medical__item-link">гипотермальный источник Кургазак</li>
-								<li class="medical__item-link">высококлассный санаторий «Янган-тау»</li>
-								<li class="medical__item-link">Куселяровские сероводородные источники</li>
+								<li class="medical__item-link">термальные пары из естественных трещин Янган-Тау
+								</li>
+								<li class="medical__item-link">чистейший горный воздух, насыщенный аэроионами
+								</li>
+								<li class="medical__item-link">минеральный источник «Кургазак»
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -431,10 +465,10 @@
 						</div>
 						<div class="medical__item-text">
 							<ul class="medical__item-list">
-								<li class="medical__item-link">геотермальный феномен горы Янган-тау</li>
-								<li class="medical__item-link">гипотермальный источник Кургазак</li>
-								<li class="medical__item-link">высококлассный санаторий «Янган-тау»</li>
-								<li class="medical__item-link">Куселяровские сероводородные источники</li>
+								<li class="medical__item-link">диагностика, лечение и профилактика заболеваний с помощью инновационного оборудования
+								</li>
+								<li class="medical__item-link">контроль результатов лечения под руководством высококвалифицированных специалистов
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -442,9 +476,6 @@
 			</div>
 			<div class="medical__outer">
 				<div class="medical-form__wrapper">
-					<div class="medical-img">
-						<img src="img/medical-form.jpg" alt="">
-					</div>
 					<div class="medical-form">
 						<div class="medical-form-title">
 							Бесплатная медицинская консультация
@@ -453,15 +484,13 @@
 							<div class="medical-form-item">
 								<input type="text" name="medical-name" id="medical-name" class="medical-input" placeholder="Имя">
 								<input type="tel" name="medical-phone" id="medical-phone" class="medical-input" placeholder="Телефон">
+								<input type="submit" value="Отправить" class="medical-submit">
 							</div>
 							<div class="medical-form-item">
 								<div class="personal-check">
-									<input type="checkbox" name="personal" id="medical" class="custom-checkbox">
+									<input type="checkbox" name="personal" id="medical" class="custom-checkbox" checked>
 									<label for="medical">Согласие на обработку персональных данных</label>
 								</div>
-							</div>
-							<div class="medical-form-item">
-								<input type="submit" value="Отправить" class="medical-submit">
 							</div>
 						</div>
 					</div>
@@ -473,7 +502,7 @@
 	<div class="scroll-container">
 		<div class="vacation">
 			<div class="vacation__inner">
-				<div class="vacation__title title" data-aos="fade-down" data-aos-duration="1500">Отдых</div>
+				<div class="vacation__title title" >Отдых</div>
 				<div class="vacation__blocks">
 					<div class="vacation__item first__vac">
 						<div class="v-item-img v-item-img-first">
@@ -506,8 +535,8 @@
 	
 		<div class="afisha">
 			<div class="afisha__inner">
-				<div class="afisha__title title" data-aos="fade-down" data-aos-offset="500">Афиша событий</div>
-				<div class="afisha__list" data-aos="fade-left">
+				<div class="afisha__title title">Афиша событий</div>
+				<div class="afisha__list">
 					<div class="afisha__item">
 						<div class="afisha-img-wrap">
 							<img src="img/afisha-1.jpg" alt="" class="afisha__img">
@@ -524,13 +553,13 @@
 					</div>
 					<div class="afisha__item">
 						<div class="afisha-img-wrap">
-							<img src="img/afisha-1.jpg" alt="" class="afisha__img">
+							<img src="img/afisha-2.jpg" alt="" class="afisha__img">
 						</div>
 						<div class="afisha-info-w">
 							<div class="afisha__info">
-								<div class="afisha__item-date">15.07.2022</div>
+								<div class="afisha__item-date">23.06.2022</div>
 								<div class="afisha__text">
-									Турнир по борьбе «Корэш»
+									День медицинского работника
 								</div>
 							</div>
 							<a href="#" class="afisha__more more-btn"></a>
@@ -538,13 +567,13 @@
 					</div>
 					<div class="afisha__item">
 						<div class="afisha-img-wrap">
-							<img src="img/afisha-1.jpg" alt="" class="afisha__img">
+							<img src="img/afisha-3.jpg" alt="" class="afisha__img">
 						</div>
 						<div class="afisha-info-w">
 							<div class="afisha__info">
-								<div class="afisha__item-date">15.07.2022</div>
+								<div class="afisha__item-date">16.08.2022</div>
 								<div class="afisha__text">
-									Турнир по борьбе «Корэш»
+									Праздник плуга
 								</div>
 							</div>
 							<a href="#" class="afisha__more more-btn"></a>
@@ -552,13 +581,27 @@
 					</div>
 					<div class="afisha__item">
 						<div class="afisha-img-wrap">
-							<img src="img/afisha-1.jpg" alt="" class="afisha__img">
+							<img src="img/afisha-4.jpg" alt="" class="afisha__img">
 						</div>
 						<div class="afisha-info-w">
 							<div class="afisha__info">
-								<div class="afisha__item-date">15.07.2022</div>
+								<div class="afisha__item-date">31.08.2022</div>
 								<div class="afisha__text">
-									Турнир по борьбе «Корэш»
+									День открытых дверей в Янган-Тау
+								</div>
+							</div>
+							<a href="#" class="afisha__more more-btn"></a>
+						</div>
+					</div>
+					<div class="afisha__item">
+						<div class="afisha-img-wrap">
+							<img src="img/afisha-5.jpg" alt="" class="afisha__img">
+						</div>
+						<div class="afisha-info-w">
+							<div class="afisha__info">
+								<div class="afisha__item-date">25.07.2022</div>
+								<div class="afisha__text">
+									Турнир по шашке <br>среди детей
 								</div>
 							</div>
 							<a href="#" class="afisha__more more-btn"></a>
@@ -572,8 +615,8 @@
 	<div class="contacts-and-call">
 		<div class="cac__inner">
 			<div class="contacts">
-				<div class="contacts-call__title" data-aos="fade-left" data-aos-duration="1500">Контакты</div>
-				<div class="contacts__address" data-aos="fade-left" data-aos-duration="1500">
+				<div class="contacts-call__title" >Контакты</div>
+				<div class="contacts__address" >
 					<div class="c-left">
 						<span class="contact-post-title">Адрес</span>
 						<span class="contact-info">452492, Республика Башкортостан, Салаватский район, с. Янгантау, <br>ул. Центральная, 20</span>
@@ -583,7 +626,7 @@
 						<span class="contact-info">8 937 340 11 62</span>
 					</div>
 				</div>
-				<div class="contacts__realize" data-aos="fade-left" data-aos-duration="1500">
+				<div class="contacts__realize" >
 					<div class="c-left">
 						<span class="contact-post-title">Отдел реализации</span>
 						<span class="contact-info">+7 347 200 8308</span>
@@ -597,7 +640,7 @@
 						<span class="contact-info">вс – выходной</span>
 					</div>
 				</div>
-				<div class="contacts__medic" data-aos="fade-left" data-aos-duration="1500">
+				<div class="contacts__medic" >
 					<div class="c-left">
 						<span class="contact-post-title">Врач-консультант</span>
 						<span class="contact-info">+7 917 795 23 07</span>
@@ -610,8 +653,8 @@
 				</div>
 			</div>
 			<div class="call-form">
-				<div class="contacts-call__title" data-aos="fade-right" data-aos-duration="1500">Заказать звонок</div>
-				<div class="call-form__inner" data-aos="fade-right" data-aos-duration="1500">
+				<div class="contacts-call__title" >Заказать звонок</div>
+				<div class="call-form__inner" >
 					<form action="#" class="send-form">
 						<input type="text" name="name" id="name" placeholder="Имя">
 						<input type="tel" name="phone" id="phone" placeholder="Телефон">
@@ -628,7 +671,7 @@
 	</div>
 	
 	<footer>
-		<div class="footer__inner" data-aos="fade-down" data-aos-duration="1500">
+		<div class="footer__inner" >
 			<div class="footer__menu">
 				<div class="footer__info">
 					<div class="footer__logo">
@@ -642,46 +685,57 @@
 				<div class="footer__nav">
 					<div class="footer__nav-top">
 						<div class="footer__nav-wrapper">
-							<a href="#" class="footer__nav-title">О геокурорте</a>
-							<a href="#" class="footer__nav-link">Мы - Янган-тау</a>
-							<a href="#" class="footer__nav-link">Территория</a>
-							<a href="#" class="footer__nav-link">Галерея</a>
-							<a href="#" class="footer__nav-link">Публичная информация</a>
+							<ul>
+								<li><a href="#" class="footer__nav-title">О геокурорте</a></li>
+								<li><a href="#" class="footer__nav-link">Мы - Янган-тау</a></li>
+								<li><a href="#" class="footer__nav-link">Территория</a></li>
+								<li><a href="#" class="footer__nav-link">Галерея</a></li>
+								<li><a href="#" class="footer__nav-link">Публичная информация</a></li>
+							</ul>	
 						</div>
 						<div class="footer__nav-wrapper">
-							<a href="#" class="footer__nav-title">О геокурорте</a>
-							<a href="#" class="footer__nav-link">Мы - Янган-тау</a>
-							<a href="#" class="footer__nav-link">Территория</a>
-							<a href="#" class="footer__nav-link">Галерея</a>
-							<a href="#" class="footer__nav-link">Публичная информация</a>
+							<ul>
+								<li><a href="#" class="footer__nav-title">В кругу янган-тау</a></li>
+								<li><a href="#" class="footer__nav-link">Программа лояльности</a></li>
+								<li><a href="#" class="footer__nav-link">Мобильное приложение</a></li>
+								<li><a href="#" class="footer__nav-link">Истории оздоровления</a></li>
+							</ul>
 						</div>
 						<div class="footer__nav-wrapper">
-							<a href="#" class="footer__nav-title">О геокурорте</a>
-							<a href="#" class="footer__nav-link">Мы - Янган-тау</a>
-							<a href="#" class="footer__nav-link">Территория</a>
-							<a href="#" class="footer__nav-link">Галерея</a>
-							<a href="#" class="footer__nav-link">Публичная информация</a>
+							<ul>
+								<li><a href="#" class="footer__nav-title">Отдых</a></li>
+								<li><a href="#" class="footer__nav-link">Ипподром</a></li>
+								<li><a href="#" class="footer__nav-link">Горнолыжный комплекс</a></li>
+								<li><a href="#" class="footer__nav-link">Зоопарк</a></li>
+							</ul>
 						</div>
 						<div class="footer__nav-wrapper">
-							<a href="#" class="footer__nav-title">О геокурорте</a>
-							<a href="#" class="footer__nav-link">Мы - Янган-тау</a>
-							<a href="#" class="footer__nav-link">Территория</a>
-							<a href="#" class="footer__nav-link">Галерея</a>
-							<a href="#" class="footer__nav-link">Публичная информация</a>
+							<ul>
+								<li><a href="#" class="footer__nav-title">Лечебная база</a></li>
+								<li><a href="#" class="footer__nav-link">Лечебные факторы</a></li>
+								<li><a href="#" class="footer__nav-link">Услуги</a></li>
+
+							</ul>
 						</div>
 					</div>
 					<div class="footer__nav-bottom">
 						<div class="footer__nav-wrapper">
-							<a href="#" class="footer__nav-title">Программы лечения и отдыха</a>
-							<a href="#" class="footer__nav-title">Приобрести путевку</a>
+							<ul>
+								<li><a href="#" class="footer__nav-title">Программы лечения и отдыха</a></li>
+								<li><a href="#" class="footer__nav-title">Приобрести путевку</a></li>
+							</ul>	
 						</div>
 						<div class="footer__nav-wrapper">
-							<a href="#" class="footer__nav-title">Номерной фонд</a>
-							<a href="#" class="footer__nav-title">Питание</a>
+							<ul>
+								<li><a href="#" class="footer__nav-title">Номерной фонд</a></li>
+								<li><a href="#" class="footer__nav-title">Питание</a></li>
+							</ul>
 						</div>
 						<div class="footer__nav-wrapper">
-							<a href="#" class="footer__nav-title">Геопарк янган-тау</a>
-							<a href="#" class="footer__nav-title">Контакты</a>
+							<ul>
+								<li><a href="#" class="footer__nav-title">Геопарк янган-тау</a></li>
+								<li><a href="#" class="footer__nav-title">Контакты</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -710,7 +764,7 @@
 	<script src="libs/gsap/gsap.min.js"></script>
 	<script src="libs/gsap/ScrollTrigger.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
 	<script src="libs/aos/aos.js"></script>
 	<!-- <script src="libs/waypoints/waypoints.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
@@ -721,3 +775,5 @@
 	
 </body>
 </html>
+
+
