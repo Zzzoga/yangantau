@@ -97,17 +97,20 @@ showHideSticks('.icons img.domik-2', '.stick-19')
 
 // Fixed header when scroll
 
-$(function() {
-	let header = $('header');
-	 
-	$(window).scroll(function() {
-	  if($(this).scrollTop() > 1) {
-	   header.addClass('header_fixed');
-	  } else {
-	   header.removeClass('header_fixed');
-	  }
-	});
-   });
+const header = document.querySelector('header')
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+				if ($(window).scrollTop() > 500){
+					header.classList.add('header_fixed')
+					header.querySelector('.logo img').src = 'img/logo-fixed.svg'
+				} else {
+					header.classList.remove('header_fixed')
+					header.querySelector('.logo img').src = 'img/logo_color.svg'
+                }
+        });
+});
+
 
 // GSAP Animation Full-width block with infoblock
 

@@ -149,13 +149,47 @@ header {
 	position: absolute;
 	z-index: 999;
 	width: 100%;
+
+	transition: all .5s ease;
 }
 
 .header_fixed {
+	transition: all .5s ease;
 	position: fixed;
 	left: 0;
 	top: 0;
+	background: #fff;
+	z-index: 99999999999;
 }
+
+header.header_fixed .logo img {
+	height: 105px;
+}
+
+header.header_fixed .lang__btn {
+	color: #143109;
+}
+
+header.header_fixed .nav__line {
+	background: #143109;
+}
+
+header.header_fixed .geo {
+	background: #F39425;
+	color: #fff;
+}
+
+header.header_fixed .call {
+	background: #E31F25;
+	color: #fff;
+}
+
+header.header_fixed .buy__btn {
+	background: #143109;
+	color: #fff;
+}
+
+
 
 .header {
 	display: flex;
