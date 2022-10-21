@@ -43,30 +43,81 @@ body textarea:required:valid {
 	
 }
 
-html.js .loader {
-	background: none repeat scroll 0 0 #ffffff;
-	bottom: 0;
-	height: 100%;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 100%;
-	z-index: 9999;
+#preloader {
+	background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	display: none;
+	opacity: 1;
+	transition: all .5s ease;
+	z-index: 999999999;
 }
-html.js .loader_inner {
-	background-image: url("../img/preloader.gif");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-color: #fff;
-	height: 60px;
-	width: 60px;
-	margin-top: -30px;
-	margin-left: -30px;
-	left: 50%;
-	top: 50%;
-	position: absolute;
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 body {
@@ -100,6 +151,12 @@ header {
 	width: 100%;
 }
 
+.header_fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
 .header {
 	display: flex;
     flex-direction: column;
@@ -113,6 +170,10 @@ header {
 
 .logo {
 	margin-right: 60px;
+}
+
+.logo img {
+	height: 143px;
 }
 
 .left, .right {
@@ -147,11 +208,41 @@ header {
 	color: #F7F7F7;
 	margin-left: 34px;
 	transition: all .5s ease;
+
+	position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+	display: inline;
 }
 
 .lang__btn:hover {
 	color: #E31F25;
 	text-decoration: none;
+}
+
+
+.lang__btn:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px; /* Высота линии */
+    background-color: #E31F25; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.lang__btn:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px; /* Высота линии */
+    background-color: #E31F25; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
 }
 
 .buy__btn, .geo, .call {
@@ -220,6 +311,12 @@ header {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+}
+
+
+
+.video-overlay:nth-child(2) {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .form-input {
@@ -326,7 +423,7 @@ select.guest {
 }
 
 .slick-dots li.slick-active {
-	margin-right: 52px;
+	margin-right: 42px;
 	-webkit-transition: all .5s ease;
 	-moz-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -393,6 +490,7 @@ select.guest {
     font-size: 18px;
     bottom: 1px;
     line-height: 140%;
+	font-family: 'Montserrat Light', sans-serif;
 	-webkit-transition: all .5s ease;
 	-moz-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -401,12 +499,12 @@ select.guest {
 
 .slick-dots li.slick-active button:before {
     font-family: 'slick';
-    font-size: 9px;
+    font-size: 13px;
     line-height: 17px;
     position: absolute;
-    top: 2px;
+    top: 1px;
     left: -41px;
-    width: 25px;
+    width: 24px;
     height: 25px;
     content: '■';
     text-align: center;
@@ -472,7 +570,7 @@ select.guest {
 
 .grid {
 	position: relative;
-	height: 170vh;
+	height: 150vh;
 	width: 100vw;
 }
 
@@ -541,7 +639,7 @@ select.guest {
 
 .info-item {
 	position: absolute;
-	max-width: 526px;
+	max-width: 660px;
 	display: flex;
 	flex-direction: column;
 }
@@ -551,19 +649,27 @@ select.guest {
 	margin-top: 60px;
 }
 
+.info-item img {
+	max-height: 349px;
+	height: 100%;
+	object-fit: cover;
+}
+
 .info-title {
-	font-family: 'Montserrat Semi', sans-serif;
-	font-weight: 500;
-	font-size: 32px;
-	line-height: 39px;
-	text-transform: uppercase;
+	font-family: 'Jost', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 44px;
+	line-height: 116%;
 	color: #F7F7F7;
-	margin: 19px 0 12px 0;
+	margin: 24px 0 15px 0;
 }
 
 .info-text {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 22px;
 	line-height: 140%;
 	color: #F7F7F7;
 }
@@ -674,116 +780,388 @@ select.guest {
 	left: 0;
 	z-index: 1;
 	transition: all 1.5s ease;
+	z-index: 99999999;
 }
 
 .right-cloud {
 	right: 0;
 	z-index: 1;
 	transition: all 1.5s ease;
+	z-index: 99999999;
 }
 
 .icons img {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 1;
+	cursor: pointer;
 }
 
 .icons img.vosduh {
 	top: 370px;
 	left: 362px;
+	z-index: 1;
 }
 
 .icons img.banya {
 	top: 665px;
 	left: 558px;
+	z-index: 1;
 }
 
 .icons img.dom-1 {
 	top: 365px;
 	left: 705px;
+	z-index: 1;
 }
 
 .icons img.dom-2 {
 	top: 412px;
 	left: 860px;
+	z-index: 1;
 }
 
 .icons img.dom-3 {
 	top: 425px;
 	left: 971px;
+	z-index: 1;
 }
 
 .icons img.dom-4 {
 	top: 480px;
 	left: 1065px;
+	z-index: 1;
 }
 
 .icons img.dom-5 {
 	top: 530px;
 	left: 1168px;
+	z-index: 1;
 }
 
 .icons img.dom-6 {
 	top: 615px;
 	left: 1313px;
+	z-index: 1;
 }
 
 .icons img.dom-7 {
 	top: 515px;
 	left: 1463px;
+	z-index: 1;
 }
 
 .icons img.domik-1 {
 	top: 180px;
 	left: 775px;
+	z-index: 1;
 }
 
 .icons img.magazin {
 	top: 145px;
 	left: 638px;
+	z-index: 1;
 }
 
 .icons img.lestnica-1 {
 	top: 485px;
 	left: 438px;
+	z-index: 1;
 }
 
 .icons img.lupa {
 	top: 280px;
 	left: 645px;
+	z-index: 1;
 }
 
 .icons img.lestnica-2 {
 	top: 282px;
 	left: 764px;
+	z-index: 1;
 }
 
 .icons img.venik {
 	top: 216px;
 	left: 915px;
+	z-index: 1;
 }
 
 .icons img.serdce {
 	top: 250px;
 	left: 1074px;
+	z-index: 1;
 }
 
 .icons img.instrumenti {
 	top: 340px;
 	left: 1290px;
+	z-index: 1;
 }
-
 .icons img.sport {
 	top: 383px;
 	left: 1473px;
+	z-index: 1;
 }
 
 .icons img.domik-2 {
 	top: 669px;
 	left: 1512px;
+	z-index: 1;
+}
+
+.icons img.vosduh {
+	top: 370px;
+	left: 362px;
+	z-index: 1;
+}
+
+.icons img.banya {
+	top: 665px;
+	left: 558px;
+	z-index: 1;
+}
+
+.icons img.dom-1 {
+	top: 365px;
+	left: 705px;
+	z-index: 1;
+}
+
+.icons img.dom-2 {
+	top: 412px;
+	left: 860px;
+	z-index: 1;
+}
+
+.icons img.dom-3 {
+	top: 425px;
+	left: 971px;
+	z-index: 1;
+}
+
+.icons img.dom-4 {
+	top: 480px;
+	left: 1065px;
+	z-index: 1;
+}
+
+.icons img.dom-5 {
+	top: 530px;
+	left: 1168px;
+	z-index: 1;
+}
+
+.icons img.dom-6 {
+	top: 615px;
+	left: 1313px;
+	z-index: 1;
+}
+
+.icons img.dom-7 {
+	top: 515px;
+	left: 1463px;
+	z-index: 1;
+}
+
+.icons img.domik-1 {
+	top: 180px;
+	left: 775px;
+	z-index: 1;
+}
+
+.icons img.magazin {
+	top: 145px;
+	left: 638px;
+	z-index: 1;
+}
+
+.icons img.lestnica-1 {
+	top: 485px;
+	left: 438px;
+	z-index: 1;
+}
+
+.icons img.lupa {
+	top: 280px;
+	left: 645px;
+	z-index: 1;
+}
+
+.icons img.lestnica-2 {
+	top: 282px;
+	left: 764px;
+	z-index: 1;
+}
+
+.icons img.venik {
+	top: 216px;
+	left: 915px;
+	z-index: 1;
+}
+
+.icons img.serdce {
+	top: 250px;
+	left: 1074px;
+	z-index: 1;
+}
+
+.icons img.instrumenti {
+	top: 340px;
+	left: 1290px;
+	z-index: 1;
+}
+.icons img.sport {
+	top: 383px;
+	left: 1473px;
+	z-index: 1;
+}
+
+.icons img.domik-2 {
+	top: 669px;
+	left: 1512px;
+	z-index: 1;
+}
+
+.icons-stick div {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	padding: 20px 40px;
+	max-width: 390px;
+	display: flex;
+	text-align: center;
+	background: #F39425;
+
+	position: absolute;
+
+	z-index: 0;
+	transition: all .5s ease;
+	opacity: 0;
+	display: none;
 }
 
 
+.stick-1 {
+	top: 398px;
+	left: 380px;
+	z-index: 1;
+}
+
+.stick-2 {
+	top: 685px;
+	left: 578px;
+	z-index: 1;
+}
+
+.stick-3 {
+	top: 385px;
+	left: 725px;
+	z-index: 1;
+}
+
+.stick-4 {
+	top: 412px;
+	left: 880px;
+	z-index: 1;
+}
+
+.stick-5 {
+	top: 445px;
+	left: 990px;
+	z-index: 1;
+}
+
+.stick-6 {
+	top: 500px;
+	left: 1085px;
+	z-index: 1;
+}
+
+.stick-7 {
+	top: 550px;
+	left: 1188px;
+	z-index: 1;
+}
+
+.stick-8 {
+	top: 635px;
+	left: 1333px;
+	z-index: 1;
+}
+
+.stick-9 {
+	top: 535px;
+	left: 1483px;
+	z-index: 1;
+}
+
+.stick-10 {
+	top: 200px;
+	left: 795px;
+	z-index: 1;
+}
+
+.stick-11 {
+	top: 165px;
+	left: 658px;
+	z-index: 1;
+}
+
+.stick-12 {
+	top: 505px;
+	left: 458px;
+	z-index: 1;
+}
+
+.stick-13 {
+	top: 300px;
+	left: 665px;
+	z-index: 1;
+}
+
+.stick-14 {
+	top: 302px;
+	left: 784px;
+	z-index: 1;
+}
+
+.stick-15 {
+	top: 256px;
+	left: 935px;
+	z-index: 1;
+}
+
+.stick-16 {
+	top: 270px;
+	left: 1094px;
+	z-index: 1;
+}
+
+.stick-17 {
+	top: 360px;
+	left: 1310px;
+	z-index: 1;
+}
+
+.stick-18 {
+	top: 403px;
+	left: 1493px;
+	z-index: 1;
+}
+
+.stick-19 {
+	top: 689px;
+	left: 1532px;
+	z-index: 1;
+}
 
 /* Programms */
 
@@ -945,6 +1323,10 @@ select.guest {
 	margin-top: 60px;
 }
 
+.sales__list, .afisha__list {
+	width: 2500px;
+}
+
 .sales__item, .afisha__item {
 	display: flex;
     justify-content: space-between;
@@ -1051,8 +1433,8 @@ select.guest {
 .sales__more, .afisha__more {
 	height: 50px;
 	width: 50px;
-	background-image: url(../img/white-red-arrow.svg);
-	background-position: -20px center;
+	background-image: url(../img/small-color-arrows.svg);
+	background-position: -50px center;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,0);
 	border: 1px solid #F7F7F7;
@@ -1061,8 +1443,8 @@ select.guest {
 }
 
 .sales__more:hover, .afisha__more:hover {
-	background-image: url(../img/white-red-arrow.svg);
-	background-position: -104px center;
+	background-image: url(../img/small-color-arrows.svg);
+	background-position: 0px center;
 	background-repeat: no-repeat;
 	background-color: rgba(255,255,255,1);
 }
@@ -1078,7 +1460,7 @@ select.guest {
 	flex-direction: column;
 	padding: 130px 150px 150px;
 	justify-content: space-between;
-	background: url(../img/medical-base-1.png) no-repeat center top;
+	background: url(../img/lech-1.jpg) no-repeat center top;
 	background-attachment: fixed;
 	transition: all .5s ease;
 }
@@ -1099,9 +1481,9 @@ select.guest {
 .medical__item {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
-	padding: 75px 20px;
+	padding: 75px 30px 50px 30px;
 	max-width: 663px;
 	width: 100%;
 	background: #FEFAEB;
@@ -1123,19 +1505,35 @@ select.guest {
 	text-transform: uppercase;
 	color: #361C09;
 	margin-bottom: 130px;
+	display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .medical__item-img {
 	margin-bottom: 100px;
+	display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.medical__item-list {
+	padding: 0 0 0 28px;
 }
 
 .medical__item-link {
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
-	font-weight: 500;
-	font-size: 22px;
-	line-height: 27px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
 	color: #434342;
+	list-style: none;
+	margin-bottom: 12px;
+}
+
+.medical__item-link:last-child {
+	margin-bottom: 0;
 }
 
 .medical__title {
@@ -1150,21 +1548,26 @@ select.guest {
 
 .medical__outer {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .medical-form__wrapper {
 	display: flex;
-	flex-direction: row;
-	width: 100%;
-	align-items: center;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 0 137px;
 }
 
 .medical-form {
 	background: #605294;
-	padding: 29px 136px;
+    padding: 54px 136px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .medical-form-title {
@@ -1175,7 +1578,11 @@ select.guest {
 	line-height: 120%;
 	text-transform: uppercase;
 	color: #FFFFFF;
-	margin-bottom: 32px;
+	margin-bottom: 50px;
+}
+
+.medical-form-item {
+    display: flex;
 }
 
 .medical-form-inputs {
@@ -1189,8 +1596,7 @@ select.guest {
 	border-bottom: 2px solid #FFFFFF;
 	padding: 10px;
 	outline: 0;
-	max-width: 379px;
-	width: 100%;
+	width: 390px;
 	color: #fff;
 	margin-bottom: 15px;
 	margin-right: 20px;
@@ -1629,6 +2035,50 @@ footer {
 	background: url(../img/footer-bg.svg) no-repeat center bottom;
 }
 
+.footer__nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+.footer__nav ul li {
+	list-style: none;
+}
+
+.footer__nav a, .beznebes-link {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+	display: inline;
+}
+
+.footer__nav a:hover, .beznebes-link:hover {
+	color: #361C09;
+}
+
+.footer__nav a:after, .beznebes-link:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px; /* Высота линии */
+    background-color: #361C09; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.footer__nav a:hover:after, .beznebes-link:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px; /* Высота линии */
+    background-color: #361C09; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
 .footer__menu {
 	padding: 70px 150px 92px 150px;
 	display: flex;
@@ -1739,7 +2189,11 @@ footer {
 	font-family: 'Montserrat Bold', sans-serif;
 	text-transform: uppercase;
 	color: #361C09;
+	text-decoration: none;
 }
 
+.beznebes-link:hover {
+	text-decoration: none;
+}
 
 
