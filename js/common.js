@@ -55,6 +55,34 @@ $(document).ready(function(){
         });
 });
 
+const headerContent = document.querySelector('header.content-header')
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+				if ($(window).scrollTop() > 500){
+					headerContent.classList.add('header_fixed')
+					headerContent.querySelector('.logo img').src = 'img/logo-fixed.svg'
+				} else {
+					headerContent.classList.remove('header_fixed')
+					headerContent.querySelector('.logo img').src = 'img/content-logo.svg'
+                }
+        });
+});
+
+const headerGallery = document.querySelector('header.gallery-header')
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+				if ($(window).scrollTop() > 500){
+					headerGallery.classList.add('header_fixed')
+					headerGallery.querySelector('.logo img').src = 'img/logo-fixed.svg'
+				} else {
+					headerGallery.classList.remove('header_fixed')
+					headerGallery.querySelector('.logo img').src = 'img/content-logo.svg'
+                }
+        });
+});
+
 // map icons animated
 
 

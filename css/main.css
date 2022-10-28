@@ -154,7 +154,9 @@ header {
 	transition: all .5s ease;
 }
 
-.header_fixed {
+.header_fixed, 
+.gallery-header.header_fixed,
+.content-header.header_fixed {
 	transition: all .5s ease;
 	position: fixed;
 	left: 0;
@@ -163,39 +165,70 @@ header {
 	z-index: 99999;
 }
 
-header.header_fixed .logo img {
+.header_fixed .logo img, 
+.gallery-header.header_fixed .logo img,
+.content-header.header_fixed .logo img {
 	height: 70px;
+	border: none;
 }
 
-header.header_fixed .lang__btn {
+.header_fixed .lang__btn, 
+.gallery-header.header_fixed .lang__btn,
+.content-header.header_fixed .lang__btn {
 	color: #143109;
+	border: none;
 }
 
-header.header_fixed .nav__line {
+.header_fixed .nav__line, 
+.gallery-header.header_fixed .nav__line,
+.content-header.header_fixed .nav__line {
 	background: #143109;
+	border: none;
 }
 
-header.header_fixed .geo {
+.header_fixed .geo, 
+.gallery-header.header_fixed .geo,
+.content-header.header_fixed .geo {
 	background: #F39425;
 	color: #fff;
+	border: none;
 }
 
-header.header_fixed .phone {
+.header_fixed .phone, 
+.gallery-header.header_fixed .phone,
+.content-header.header_fixed .phone {
 	background-color: #143109;
 	color: #fff;
+	border: none;
 }
 
-header.header_fixed .call {
+.header_fixed .call, 
+.gallery-header.header_fixed .call,
+.content-header.header_fixed .call {
 	background: #E31F25;
 	color: #fff;
+	border: none;
 }
 
 header.header_fixed .menu,
 header.header_fixed .lang__btn,
 header.header_fixed .for-old,
-header.header_fixed .buy__btn {
+header.header_fixed .buy__btn,
+header.gallery-header.header_fixed .menu,
+header.gallery-header.header_fixed .lang__btn,
+header.gallery-header.header_fixed .for-old,
+header.gallery-header.header_fixed .buy__btn,
+header.content-header.header_fixed .menu,
+header.content-header.header_fixed .lang__btn,
+header.content-header.header_fixed .for-old,
+header.content-header.header_fixed .buy__btn {
 	background-color: #143109;
 	color: #fff;
+	border: none;
+}
+
+header.header_fixed .for-old {
+	background: url(../img/eye-white.svg) no-repeat center center;
 }
 
 .header {
@@ -2775,9 +2808,26 @@ main .content.gallery {
 .gallery-header .geo:hover, 
 .gallery-header .phone:hover, 
 .gallery-header .call:hover {
-	background-color: #fff;
-	color: #E31F25;
 	text-decoration: none;
+    background-color: #361C09;
+    color: #fff;
+}
+
+header.gallery-header.header_fixed .menu:hover, 
+header.gallery-header.header_fixed .lang__btn:hover,
+header.gallery-header.header_fixed .for-old:hover, 
+header.gallery-header.header_fixed .buy__btn:hover, 
+header.gallery-header.header_fixed .geo:hover, 
+header.gallery-header.header_fixed .phone:hover, 
+header.gallery-header.header_fixed.call:hover {
+	text-decoration: none;
+    background-color: #361C09;
+    color: #fff;
+}
+
+header.gallery-header.header_fixed .for-old:hover {
+	background: url(../img/eye-white.svg) no-repeat center center;
+	background-color: #361C09;
 }
 
 /* MENU MODAL */
