@@ -39,36 +39,21 @@ hideMenuBtn.addEventListener('click', (e) => {
 	menuWrapper.style.transform = 'translateY(-100vh)'
 })
 
+// Fixed header when scroll
 
-// SLICK SLIDER ON HEADER
+const header = document.querySelector('header')
 
-$('.slider').slick({
-	dots: true,
-	infinite: true,
-	speed: 300,
-	slidesToShow: 1,
-	arrows: false,
-	autoplay: true,
-	autoplaySpeed: 6000
-  });
-
-document.querySelector('#slick-slide-control00').innerHTML = '01'
-document.querySelector('#slick-slide-control01').innerHTML = '02'
-document.querySelector('#slick-slide-control02').innerHTML = '03'
-
-// $('.afisha__list').slick({
-// 	slidesToShow: 5,
-// 	slidesToScroll: 1,
-// 	autoplay: true,
-// 	autoplaySpeed: 2000,
-//   });
-
-// $('.sales__list').slick({
-// 	slidesToShow: 5,
-// 	slidesToScroll: 1,
-// 	autoplay: true,
-// 	autoplaySpeed: 2000,
-//   });
+$(document).ready(function(){
+    $(window).scroll(function(){
+				if ($(window).scrollTop() > 500){
+					header.classList.add('header_fixed')
+					header.querySelector('.logo img').src = 'img/logo-fixed.svg'
+				} else {
+					header.classList.remove('header_fixed')
+					header.querySelector('.logo img').src = 'img/logo_color.svg'
+                }
+        });
+});
 
 // map icons animated
 
@@ -111,22 +96,6 @@ showHideSticks('.icons img.instrumenti', '.stick-17')
 showHideSticks('.icons img.sport', '.stick-18')
 showHideSticks('.icons img.domik-2', '.stick-19')
 
-// Fixed header when scroll
-
-const header = document.querySelector('header')
-
-$(document).ready(function(){
-    $(window).scroll(function(){
-				if ($(window).scrollTop() > 500){
-					header.classList.add('header_fixed')
-					header.querySelector('.logo img').src = 'img/logo-fixed.svg'
-				} else {
-					header.classList.remove('header_fixed')
-					header.querySelector('.logo img').src = 'img/logo_color.svg'
-                }
-        });
-});
-
 
 // GSAP Animation Full-width block with infoblock
 
@@ -163,6 +132,36 @@ ScrollTrigger.create({
 	scrub: 3,
 	pin: true
 });
+
+// SLICK SLIDER ON HEADER
+
+$('.slider').slick({
+	dots: true,
+	infinite: true,
+	speed: 300,
+	slidesToShow: 1,
+	arrows: false,
+	autoplay: true,
+	autoplaySpeed: 6000
+  });
+
+document.querySelector('#slick-slide-control00').innerHTML = '01'
+document.querySelector('#slick-slide-control01').innerHTML = '02'
+document.querySelector('#slick-slide-control02').innerHTML = '03'
+
+// $('.afisha__list').slick({
+// 	slidesToShow: 5,
+// 	slidesToScroll: 1,
+// 	autoplay: true,
+// 	autoplaySpeed: 2000,
+//   });
+
+// $('.sales__list').slick({
+// 	slidesToShow: 5,
+// 	slidesToScroll: 1,
+// 	autoplay: true,
+// 	autoplaySpeed: 2000,
+//   });
 
 // Fixed title when scroll infoblocks
 
