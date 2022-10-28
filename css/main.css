@@ -160,7 +160,7 @@ header {
 	left: 0;
 	top: 0;
 	background: #fff;
-	z-index: 99999999999;
+	z-index: 99999;
 }
 
 header.header_fixed .logo img {
