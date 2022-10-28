@@ -23,6 +23,22 @@ SmoothScroll({
     touchpadSupport   : true,
 })
 
+// SHOW/HIDE MENU MODAL
+
+const showMenuBtn = document.querySelector('.menu')
+const hideMenuBtn = document.querySelector('.menu__close')
+const menuWrapper = document.querySelector('.menu-container')
+
+showMenuBtn.addEventListener('click', (e) => {
+	e.preventDefault()
+	menuWrapper.style.transform = 'translateY(0)'
+})
+
+hideMenuBtn.addEventListener('click', (e) => {
+	e.preventDefault()
+	menuWrapper.style.transform = 'translateY(-100vh)'
+})
+
 
 // SLICK SLIDER ON HEADER
 
@@ -267,7 +283,6 @@ afishaBtns.forEach(item => {
 		e.target.parentNode.parentNode.querySelector('.afisha-img-wrap img').style.scale = '1'
 	})
 })
-
 
 }
 

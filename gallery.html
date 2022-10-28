@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+	<!-- <link rel="stylesheet" href="libs/animate/animate.css"> -->
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/aos/aos.css">
+	
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<!-- <script src="libs/modernizr/modernizr.js"></script> -->
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+
+	<div id="preloader">
+		<div id="loader"></div>
+	  </div>
+
+	<!-- Здесь пишем код -->
+
+    <div class="menu-container">
+		<div class="menu__close">
+			<img src="img/menu-close.svg" alt="">
+		</div>
+		<div class="menu__items-list">
+			<a href="/" class="menu__item-link">Главная</a>
+			<a href="/yurtak.html" class="menu__item-link">"ЮРТАК"</a>
+			<a href="/news.html" class="menu__item-link">Новости</a>
+			<a href="/gallery.html" class="menu__item-link">Галерея</a>
+		</div>
+	</div>
+
+	<div class="header__container">
+		<header class="gallery-header">
+			<div class="left">
+				<a href="#" class="menu">Меню</a>
+				<a href="#" class="lang__btn">En</a>
+                <a href="#" class="for-old"></a>
+				<a href="#" class="buy__btn">Купить путевку</a>
+			</div>
+			<div class="middle">
+				<a href="#" class="logo"><img src="img/content-logo.svg" alt=""></a>
+			</div>
+			<div class="right">
+				<a href="#" class="geo">Геопарк</a>
+				<a href="#" class="phone">8 (800) 707 50 14</a>
+				<a href="#" class="call">Заказать звонок</a>
+			</div>
+		</header>
+
+		<div class="header gallery" >
+			<div class="posttitle">О ГЕОКУРОРТЕ</div>
+			<div class="title">Галерея</div>
+		</div>
+
+		<div class="slider-gallery">
+            <img src="img/gallery-header.jpg" alt="">
+		</div>
+	
+		<div class="slider__bottom">
+			<svg width="1920" height="35" viewBox="0 0 1920 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<mask id="mask0_219_1615" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="35">
+				<rect width="1920" height="35" fill="#D9D9D9"/>
+				</mask>
+				<g mask="url(#mask0_219_1615)">
+				<path d="M1920 20.5665V844C1813.08 841.6 1735.55 841.2 1735.55 841.2C1716.82 841.6 1714.21 843.5 1667.63 842C1634.67 840.9 1584.41 843.2 1552.05 841.6C1537.71 840.9 1424.74 842.1 1376.85 841.2C1342.71 840.5 1356.58 841 1331.8 842.3C1283.56 844.7 1268.03 840.7 1243.61 841.6C1206.03 843 1178.17 843 1147.83 842C1032.84 838.3 1030.47 845.2 899.011 842.4C878.266 842 785.212 841 730.446 842.5C694.647 843.5 664.656 843.5 643.675 842.6C609.891 841.2 544.812 839.1 500.241 842.5C480.326 844 408.135 842.6 400.548 842.6C337.011 843.3 313.777 838 267.546 838.6C195.236 839.5 180.893 844.9 139.996 842.6C117.261 841 76.3973 843 38.4948 843C20.7279 844.5 13.6212 845 8.29118 844.5C5.33004 844.5 1.18445 845 0 845V20C3.55336 20 18.5 14.5 31 14.5C43.5 14.5 63.5 21.5 75.5 21.5C85 21.5 139.5 13.5 149.5 13.5C160.5 13.5 268.5 26 290 26C305.001 26 380.5 12 396 12C400 12 485.967 20.4664 506 20.3664C541.5 20.3665 576 12 632 12C688 12 713.701 22.6 749.5 23.5C804.384 24.9001 843.5 12 900 12C942 12 1086.5 22.9666 1114 22.9666C1144.46 21.9665 1217.5 8.00002 1241.5 8.00002C1258 8.00002 1312.5 20.7665 1340.23 20.7665C1360 20.7665 1397.36 12.7 1431.5 12C1479.39 11 1521.16 21.3665 1535.5 20.5665C1565 21.0999 1640.16 13.2001 1673 12C1719.59 10.3 1766.5 0.500021 1777.5 0.5C1788.5 0.499979 1879.5 17 1920 20.5665Z" fill="#FAF5E9"/>
+				</g>
+			</svg>
+		</div>
+	</div>
+
+
+    <main>
+        <div class="content gallery">
+            <div class="gallery-filter">
+                <div class="gallery-years">
+                    <a href="#" class="gallery-year">все</a>
+                    <a href="#" class="gallery-year">2022</a>
+                    <a href="#" class="gallery-year">2021</a>
+                    <a href="#" class="gallery-year">2020</a>
+                    <a href="#" class="gallery-year">2019</a>
+                    <a href="#" class="gallery-year">2018</a>
+                    <a href="#" class="gallery-year">2017</a>
+                    <a href="#" class="gallery-year">2016</a>
+                    <a href="#" class="gallery-year">2015</a>
+                    <a href="#" class="gallery-year">2014</a>
+                    <a href="#" class="gallery-year">1937</a>
+                </div>
+                <div class="gallery-type">
+                    <a href="#" class="gallery-year type">фото</a>
+                    <a href="#" class="gallery-year type">видео</a>
+                </div>
+            </div>
+            <div class="gallery-items">
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-1.jpg" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-2.jpg" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-3.jpg" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-item.png" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-5.jpg" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-6.jpg" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-7.jpg" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-8.jpg" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-item-overlay"></div>
+                    <img src="img/gallery-9.jpg" alt="">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-date">06.02.2017</div>
+                        <div class="gallery-item-text">Фотографии Виктора Руденко (Йошкар-Ола)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item__more">
+                <a class="programms__btn" href="#">
+                    <span class="programms__icon"></span>
+                    <span class="programms__text">Показать больше</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+	<div class="contacts-and-call">
+		<div class="cac__inner">
+			<div class="contacts">
+				<div class="contacts-call__title" >Контакты</div>
+				<div class="contacts__address" >
+					<div class="c-left">
+						<span class="contact-post-title">Адрес</span>
+						<span class="contact-info">452492, Республика Башкортостан, Салаватский район, с. Янгантау, <br>ул. Центральная, 20</span>
+					</div>
+					<div class="c-right">
+						<span class="contact-post-title">WhatsApp</span>
+						<span class="contact-info">8 937 340 11 62</span>
+					</div>
+				</div>
+				<div class="contacts__realize" >
+					<div class="c-left">
+						<span class="contact-post-title">Отдел реализации</span>
+						<span class="contact-info">+7 347 200 8308</span>
+						<span class="contact-info">+7 800 707 50 14</span>
+						<span class="contact-info">market@yantau.ru</span>
+					</div>
+					<div class="c-right">
+						<span class="contact-post-title">None</span>
+						<span class="contact-info">пн-пт – 07:00-21:00 (Мск)</span>
+						<span class="contact-info">сб – 07:00-13:00 (Мск)</span>
+						<span class="contact-info">вс – выходной</span>
+					</div>
+				</div>
+				<div class="contacts__medic" >
+					<div class="c-left">
+						<span class="contact-post-title">Врач-консультант</span>
+						<span class="contact-info">+7 917 795 23 07</span>
+						<span class="contact-info">konsultant@yantau.ru</span>
+					</div>
+					<div class="c-right">
+						<span class="contact-post-title">None</span>
+						<span class="contact-info">11:00 - 19:00 (Мск)</span>
+					</div>
+				</div>
+			</div>
+			<div class="call-form">
+				<div class="contacts-call__title" >Заказать звонок</div>
+				<div class="call-form__inner" >
+					<form action="#" class="send-form">
+						<input type="text" name="name" id="name" placeholder="Имя">
+						<input type="tel" name="phone" id="phone" placeholder="Телефон">
+						<input type="text" name="comment" id="comment" placeholder="Комментарий">
+						<div class="personal-check">
+							<input type="checkbox" name="personal" id="personal" class="custom-checkbox">
+							<label for="personal">Согласие на обработку персональных данных</label>
+						</div>
+						<input type="submit" value="Отправить заявку" class="submit-btn" id="submit-btn">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<div class="footer__inner" >
+			<div class="footer__menu">
+				<div class="footer__info">
+					<div class="footer__logo">
+						<img src="img/footer-logo.svg" alt="">
+					</div>
+					<div class="footer__soc">
+						<a href="#" class="vk"></a>
+						<a href="#" class="tg"></a>
+					</div>
+				</div>
+				<div class="footer__nav">
+					<div class="footer__nav-top">
+						<div class="footer__nav-wrapper">
+							<ul>
+								<li><a href="#" class="footer__nav-title">О геокурорте</a></li>
+								<li><a href="#" class="footer__nav-link">Мы - Янган-тау</a></li>
+								<li><a href="#" class="footer__nav-link">Территория</a></li>
+								<li><a href="#" class="footer__nav-link">Галерея</a></li>
+								<li><a href="#" class="footer__nav-link">Публичная информация</a></li>
+							</ul>	
+						</div>
+						<div class="footer__nav-wrapper">
+							<ul>
+								<li><a href="#" class="footer__nav-title">В кругу янган-тау</a></li>
+								<li><a href="#" class="footer__nav-link">Программа лояльности</a></li>
+								<li><a href="#" class="footer__nav-link">Мобильное приложение</a></li>
+								<li><a href="#" class="footer__nav-link">Истории оздоровления</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav-wrapper">
+							<ul>
+								<li><a href="#" class="footer__nav-title">Отдых</a></li>
+								<li><a href="#" class="footer__nav-link">Ипподром</a></li>
+								<li><a href="#" class="footer__nav-link">Горнолыжный комплекс</a></li>
+								<li><a href="#" class="footer__nav-link">Зоопарк</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav-wrapper">
+							<ul>
+								<li><a href="#" class="footer__nav-title">Лечебная база</a></li>
+								<li><a href="#" class="footer__nav-link">Лечебные факторы</a></li>
+								<li><a href="#" class="footer__nav-link">Услуги</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="footer__nav-bottom">
+						<div class="footer__nav-wrapper">
+							<ul>
+								<li><a href="#" class="footer__nav-title">Программы лечения и отдыха</a></li>
+								<li><a href="#" class="footer__nav-title">Приобрести путевку</a></li>
+							</ul>	
+						</div>
+						<div class="footer__nav-wrapper">
+							<ul>
+								<li><a href="#" class="footer__nav-title">Номерной фонд</a></li>
+								<li><a href="#" class="footer__nav-title">Питание</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav-wrapper">
+							<ul>
+								<li><a href="#" class="footer__nav-title">Геопарк янган-тау</a></li>
+								<li><a href="#" class="footer__nav-title">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__links">
+				<div class="footer__links-inner">
+					<div class="footer__infoblock">
+						<div class="copyright">
+							ЯНГАН-ТАУ, 2022
+						</div>
+						<div class="politics">
+							<a href="#" class="politics-link">Политика конфиденциальности</a>
+						</div>
+					</div>
+					<div class="beznebes">
+						Дизайн и разработка - <a href="#" class="beznebes-link">beznebes</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+		
+
+
+	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/gsap/gsap.min.js"></script>
+	<script src="libs/gsap/ScrollTrigger.min.js"></script>
+	<script src="libs/slick/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+	<script src="libs/aos/aos.js"></script>
+	<!-- <script src="libs/waypoints/waypoints.min.js"></script>
+	<script src="libs/animate/animate-css.js"></script>
+	
+	<script src="libs/plugins-scroll/plugins-scroll.js"></script> -->
+	
+	<script src="js/common.js"></script>
+	
+</body>
+</html>
+
+
